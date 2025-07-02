@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="x"></h1>
+    <h1 id="y"></h1>
+    <h1 id="z"></h1>
+    <script>
+        let x = 10;
+        let y = x;
+        let z = "Anna";
+        let x1 = typeof x;
+        let y1 = typeof y;
+        let z1 = typeof z;
+        let frase1 = `${x} è di tipo ${x1}`;
+        let frase2 = `${y} è di tipo ${y1}`;
+        let frase3 = `${z} è di tipo ${z1}`;
+
+
+        document.getElementById("x").innerHTML = frase1;
+        document.getElementById("y").innerHTML = frase2;
+        document.getElementById("z").innerHTML = frase3;
+
+    </script>
+</body>
+</html>

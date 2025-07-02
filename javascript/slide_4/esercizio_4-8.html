@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="1"></div>
+    
+    <script>
+        
+        let array = [1,2,5,4,6,9,3,7,8,10];
+        let array1 = array.join(", ");
+        let cont_pari = 0;
+        let cont_dispari = 0;
+        
+        for(let i = 0; i < array.length; i ++ ){
+            if (array[i] % 2 == 0){
+                cont_pari ++;}
+            else {
+                cont_dispari ++;
+            }     
+        }
+              
+        document.getElementById("1").innerHTML = `Tra (${array1})  ci sono ${cont_pari} numeri pari e ${cont_dispari} numeri dispari`
+   
+   </script>
+</body>
+</html>

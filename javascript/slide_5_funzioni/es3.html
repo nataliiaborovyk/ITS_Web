@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Gioco: indovina il numero!</h1>
+    <input type="text" id="tentativo" placeholder="Scrivi un numero">
+    <button onclick="controlla()">Controlla</button>
+    <p>Tentativi: <input type="number" min="0" max="100" id="conteggio" value="0" readonly></p>
+    <button onclick="nuovoGioco()">Nuovo Gioco</button>
+    <p id="messaggio"></p>
+    <script>
+        let numDaIndovinare = Math.floor(Math.random() * 101);  
+        // Math.random() - numero casuale tra 0 e 1(escluso 1). Se lo moltiplico per 101 avro i numeri casuali fra 0 e 101(escluso 101) 
+        // Math.floor() - arotonda verso il basso, quindi prendo solo la parte intera
+        let tentativi = 0;
+
+        function controlla(){
+            let numUtente = parseInt(document.getElementById("tentativo").value)
+            tentativi++;
+            document.getElementById("conteggio").value = tentativi;
+            if (numUtente === numDaIndovinare) {
+                document.getElementById("messaggio").textContent = "Hai indovinato";
+            } else if (numUtente < numDaIndovinare) {
+                document.getElementById("messaggio").textContent = "Il tuo numero è piu piccolo"; 
+            } else {
+                document.getElementById("messaggio").textContent = "Il tuo numero è piu grande";
+            }
+        }
+
+        function nuovoGioco() {
+            numDaIndovinare = Math.floor(Math.random()*101);
+            tentativi = 0;
+            document.getElementById("tentativo").value = "";
+            document.getElementById("conteggio").value = "0";
+            document.getElementById("messaggio").textContent = "";
+        }
+
+    </script>
+    
+</body>
+</html>

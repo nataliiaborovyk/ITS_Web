@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lista con React</title>
+
+    <!-- React e ReactDOM -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  </head>
+  <body>
+    <!-- Punto di inserimento React -->
+    <div id="root"></div>
+
+    <script>
+      // Crea l'elemento <ul class="list"> con 3 <li> dentro
+      const ul = React.createElement(
+        "ul",                    // tipo di elemento HTML
+        { className: "list" },   // attributi (class="list")
+        [                        // figli (array di <li>)
+          React.createElement("li", { key: 'php' }, 'PHP'),
+          React.createElement("li", { key: 'javascript' }, 'Javascript'),
+          React.createElement("li", { key: 'angular' }, 'Angular')
+        ]
+      );
+//  Spiegazione delle key:
+
+// Ogni <li> ha una key (es. key: 'php') — React richiede una key quando crei liste di elementi, 
+// per tener traccia di oggetti unici.
+     
+    // Seleziona il div HTML
+      const rootElement = document.getElementById("root");
+
+      // Crea una root React
+      const root = ReactDOM.createRoot(rootElement);
+
+      // Mostra (renderizza) la lista
+      root.render(ul);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+my-app/
+├── node_modules/       ← librerie installate (non tocchi)
+├── public/
+│   └── index.html      ← unica vera pagina HTML
+├── src/
+│   ├── App.js          ← componente principale
+│   ├── index.js        ← collega React all'HTML
+│   ├── Saluto.js       ← tuo componente personale
+│   └── App.css         ← stile grafico
+├── package.json        ← elenco librerie usate

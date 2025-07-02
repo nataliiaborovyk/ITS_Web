@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="risultato"></div>
+    <div id="salute"></div>
+    <script>
+        //esempio funzione senza ritorno
+            function somma(num1, num2=5){
+                document.getElementById("risultato").innerHTML = "la somma è " + (num1 + num2);
+            }
+            somma(2);
+        
+            // esempio funzione con ritorno
+        function salutare(nome){
+            return "Welcome " + nome;
+        }
+
+        //invocazione
+        let output = salutare("Alice");
+        document.getElementById("salute").innerHTML = "<i>" + output + "</i>";
+    </script>
+</body>
+</html>

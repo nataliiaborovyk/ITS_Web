@@ -1,0 +1,59 @@
+body {
+    background-color: rgb(160, 222, 169)
+   }
+
+.infolibri {
+    background-color: rgb(238, 234, 234);
+    font-style:initial;
+    font-size:small;
+    padding: 3px;
+    margin: 5px;
+    border: 20px white 
+   }
+
+.menustyle {
+    font-size: medium;
+    font-weight: 600;
+    
+   }
+
+.vers1 {
+    background-color: rgb(238, 234, 234);
+    font-style:initial;
+    font-size:small;
+    color: green;
+    padding: 3px;
+    margin: 5px;
+    border: 20px white 
+}
+
+.vers2 {
+    background-color: rgb(238, 234, 234);
+    font-style:oblique;
+    font-size:medium;
+    padding: 3px;
+    margin: 5px;
+    border: 20px white 
+}
+
+.vers3 {
+    background-color: rgb(206, 203, 203); 
+    padding: 15px
+}
+
+.vers4 {
+    margin-bottom: 20px
+}
+
+.vers5 {
+    padding: 20px
+}
+
+.vers6 {
+    background-color: white; 
+    padding: 0%;
+}
+
+.vers7 {
+    font-size: medium
+}

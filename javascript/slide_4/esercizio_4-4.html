@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="1"></div>
+    <br>
+    <div id="2"></div>
+    <script>
+        
+        let result1 = "(";
+        let cont1 = 0;
+        while (cont1 <= 20){
+            result1 += cont1;
+            if (cont1 < 20) {
+                result1 += ", ";
+            }
+            cont1 += 2 ;
+        }
+        result1 += ")"
+        
+        document.getElementById("1").innerHTML=`Con while <br> ${result1}`;
+        
+        
+        let result2 = "(";
+        for (let cont2 = 0; cont2 <= 20; cont2 += 2){
+            result2 += cont2;
+            if (cont2 < 20) {
+                result2 += ", ";
+            }
+        }
+        result2 += ")"
+        
+        document.getElementById("2").innerHTML=`Con for <br> ${result2}`
+   
+   </script>
+</body>
+</html>

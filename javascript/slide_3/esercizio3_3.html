@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="1"></div>
+    <script>
+        let secondi = 12560
+        let ore = parseInt(secondi/3600)
+        let minuti = parseInt((secondi%3600)/60)
+        let sec = secondi % 60
+    
+        document.getElementById("1").innerHTML = `Ore: ${ore}, minuti: ${minuti}, secondi: ${sec}`
+    </script>
+</body>
+</html>

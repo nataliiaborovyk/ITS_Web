@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="1"></div>
+    <script>
+        
+        let array = [1,2,3,4,5];
+        let somma = 0;
+        let media = 0;
+        
+        for (let i in array){
+            somma += array[i];
+        }
+        
+        media = somma / array.length;
+        let frase = `Somma = ${somma} <br> Media = ${media}`;
+        
+        document.getElementById("1").innerHTML=frase;
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num1" placeholder="Inserisci il numero"> 
+    <select id="operatore">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" id="num2" placeholder="Inserisci il numero"> 
+    <button onclick="calcola()">Calcola</button>
+    <div id="risultato"></div>
+   
+   <script>
+        function calcola() {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+            let operatore = document.getElementById("operatore").value
+            let risultato = 0
+            switch(operatore) {
+                case "+":
+                    risultato = num1 + num2;
+                    break;
+                case "-":
+                    risultato = num1 - num2;
+                    break;
+                case "*":
+                    risultato = num1 * num2;
+                    break;
+                case "/":
+                    if (num2 === 0) {
+                        risultato = "Errore, non si puo dividere a 0"
+                    } else {
+                    risultato = num1 / num2;
+                    }
+                    break;
+                }
+            document.getElementById("risultato").innerHTML = "Risultato: " + risultato; 
+        }
+    </script>
+
+</body>
+</html>
