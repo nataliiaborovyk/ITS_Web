@@ -23,6 +23,7 @@ const FetchComponent = () => {
         .then(ris=>{
             setAlbum(ris)
         })
+        
     },[])
 
 // è la stessa cosa
