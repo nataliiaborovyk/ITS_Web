@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!-- Titolo della pagina -->
+  <h1>Registrazione Utente</h1>
+
+  <!-- Inizio del form -->
+  <form method="get" action="dati.html">
+    
+    <!-- Campo Nome -->
+    <label for="idNome">Nome:</label><br>
+    <input type="text" id="idNome" name="nome" placeholder="Scrivi il tuo nome"><br><br>
+
+    <!-- Campo Email -->
+    <label for="idEmail">Email:</label><br>
+    <input type="email" id="idEmail" name="email" placeholder="tua@email.com"><br><br>
+
+    <!-- Campo Età -->
+    <label for="idEta">Età:</label><br>
+    <input type="number" id="idEta" name="eta" min="1" max="120"><br><br>
+
+    <label for="sceltaEta">Scegli la tua età:</label><br>
+<select id="sceltaEta" name="eta">
+  <option value="18">18</option>
+  <option value="19">19</option>
+  <option value="20">20</option>
+</select>
+
+    <!-- Campo Messaggio -->
+    <label for="idMessaggio">Messaggio:</label><br>
+    <textarea id="idMessaggio" name="messaggio" rows="4" cols="30" placeholder="Scrivi qualcosa..."></textarea><br><br>
+
+    <!-- Bottone di invio -->
+    <button type="submit">Invia</button>
+
+  </form>
+</body>
+</html>

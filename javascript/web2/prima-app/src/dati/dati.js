@@ -19,6 +19,24 @@ export const persone = [
     },
   ];
 
+   export   const news = [
+        {
+            id: 1,
+            titolo: "Notizie Roma",
+            contenuto: "Oggi piove"
+        },
+        {
+            id:2, 
+            titolo:"Notizie Firenze",
+            contenuto: "Sarà 40 gradi"
+        },
+        {
+            id:3,
+            titolo: "Notizie Milano",
+            contenuto: "Priove con grandine"
+        }
+    ];
+
 
 export const cifre = [1,2,3,4,5,6,7,8,9,10]
 
@@ -54,4 +72,10 @@ export const anagrafica = [
       cognome: "rossi",
       eta: "38",
     },
+  ];
+
+  export const utenti1 = [
+    {nome: 'Nat', eta:30},
+    {nome: 'Luca', eta: 25},
+    {nome: 'Anna', eta: 25}
   ];

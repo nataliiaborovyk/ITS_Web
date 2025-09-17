@@ -1,5 +1,5 @@
 import React from 'react'
-const cifre = [8,2,3,4,5,6,7,8,9,10]
+const cifre = [1,2,3,4,5,6,7,8,9,10]
 const Tabellina = ({num}) => {
   return (
     <div>
