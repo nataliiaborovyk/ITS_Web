@@ -12,4 +12,4 @@ const Termostato  = () =>  {
     );
 }
 
-export default Termostato;
+export default Termostato;5

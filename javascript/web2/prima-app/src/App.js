@@ -44,6 +44,7 @@ import MessaggioSegreto from './compito_estate/esercizio_6/MessaggioSegreto';
 import AggiornaTitolo from './compito_estate/esercizio_7/AggiornaTitolo';
 import GalleriaFoto from './compito_estate/esercizio_8/GalleriaFoto';
 import ModuloContatti from './compito_estate/esercizio_9/ModuloContatti';
+import CardUtente1 from './compito_estate/esercizio_2/CardUtente1';
 
 function App() {
 
@@ -58,13 +59,26 @@ function App() {
       <CardUtente
       nome ="Nat"
       email = "nat@gmail.com"
-      imgUrl = "https://placehold.co/"
+      imgUrl = "https://placehold.co/100x100"
       />
 
       <CardUtente
       nome ="Met"
-      email = "met@gmail.com"
-      imgUrl = "https://placehold.co/"
+      email = "met@gmail.com" 
+      imgUrl = "https://placehold.co/100x100"
+      />
+
+          <h3>Esercizio 2: Componenti Dinamici con le Props</h3>
+      <CardUtente1
+      nome ="Nat"
+      email = "nat@gmail.com"
+      imgUrl = "https://placehold.co/100x100"
+      />
+
+      <CardUtente1
+      nome ="Met"
+      email = "met@gmail.com" 
+      imgUrl = "https://placehold.co/100x100"
       />
 
     <h3>Esercizio 3: Renderizzare Liste con .map()</h3>

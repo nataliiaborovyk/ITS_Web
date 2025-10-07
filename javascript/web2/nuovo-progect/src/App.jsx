@@ -4,36 +4,25 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import UserCrud from './Components/UserCrud'
 import UserCrud1 from './Components/UserCrud1'
+import Saluto from './compiti/Saluto'
+import CardUtente1 from './compito_estate/esercizio_2/CardUtente1'
+import MenuRistorante from './compito_estate/esercizio_3/MenuRistorante'
+import Termostato from './compito_estate/esercizio_4/Termostato'
+import TodoApp from './compito_estate/todolist/TodoApp'
+import MainComponent from './compito_estate/useContext/MainComponent'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <UserCrud></UserCrud>
-      <UserCrud1></UserCrud1>
+    <div className = "container pu-3">
 
+      {/* <TodoApp></TodoApp> */}
+      <MainComponent></MainComponent>
+    </div>
 
-      {/* <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
     </>
   )
 }

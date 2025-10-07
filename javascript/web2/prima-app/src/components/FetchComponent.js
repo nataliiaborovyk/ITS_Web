@@ -22,8 +22,8 @@ const FetchComponent = () => {
         .then(res=>res.json())
         .then(ris=>{
             setAlbum(ris)
-        })
-        
+        }) 
+
     },[])
 
 // è la stessa cosa
