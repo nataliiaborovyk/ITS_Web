@@ -10,6 +10,11 @@ import MenuRistorante from './compito_estate/esercizio_3/MenuRistorante'
 import Termostato from './compito_estate/esercizio_4/Termostato'
 import TodoApp from './compito_estate/todolist/TodoApp'
 import MainComponent from './compito_estate/useContext/MainComponent'
+import ProvaRouter from './Router/ProvaRouter'
+import Testo from './esercizi base useState/Testo'
+import Mondo from './esercizi base useState/Mondo'
+import Echo from './esercizi base useState/Echo'
+import Pizza from './esercizi base useState/Pizza'
 
 
 function App() {
@@ -20,7 +25,16 @@ function App() {
     <div className = "container pu-3">
 
       {/* <TodoApp></TodoApp> */}
-      <MainComponent></MainComponent>
+      {/* <MainComponent></MainComponent> */}
+
+      {/* <ProvaRouter></ProvaRouter> */}
+      <Testo></Testo>
+      <br/>
+      <Mondo></Mondo>
+      <br/>
+      <Echo></Echo>
+      <br/>
+      <Pizza></Pizza>
     </div>
 
     </>

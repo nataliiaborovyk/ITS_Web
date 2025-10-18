@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useContext } from "react";
 const data = [
   { id: 1, name: "omar" },
   { id: 2, name: "tazio" },
@@ -6,13 +6,16 @@ const data = [
   { id: 4, name: "anna" },
 ];
 
-const AppContext=createContext();
+const AppContext=createContext();    // 1) crea il contenitore
 
 
 const MainComponent = () => {
   const [people, setPeople] = useState(data);
 
-  const removePeople = (id) => setPeople(people.filter((el) => el.id !== id));
+  const removePeople = (id) => {
+    setPeople(people.filter((el) => el.id !== id));
+  };
+    // 2) Provider: rende disponibili people e removePeople ai figli
   return (
     <AppContext.Provider value={{people, removePeople}}>
     <div>
@@ -24,6 +27,7 @@ const MainComponent = () => {
 };
 
 const Elenco = () => {
+    // 3) useContext: prende i dati dal Provider più vicino
     const {people, removePeople} = (useContext(AppContext));
   return (
     <div>
