@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML esercizio semplice</title>
+</head>
+<body>
+
+    <h2 id="titolo">Testo originale</h2>
+
+    <div id="box">
+        <p>Questo è il contenuto iniziale.</p>
+    </div>
+
+    <script>
+        // Sostituiamo il contenuto della box
+        document.getElementById("box").innerHTML = "<strong>Contenuto Sostituito!</strong>";
+
+        // Cambiamo anche il titolo
+        document.querySelector("#titolo").innerHTML = "Titolo modificato con innerHTML!";
+    </script>
+
+</body>
+</html>

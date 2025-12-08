@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .titolo {
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="tit1"></h3>
+    <div id="container"></div>
+
+    <script>
+        let s = document.createElement("span")
+        s.textContent = "Titolo creato in JS"
+        document.getElementById("tit1").append(s)
+        document.getElementById("tit1").classList.add("titolo")
+        let p = document.createElement("p")
+        p.innerHTML = "<strong>Ciao, creo un nuovo elemento</strong>"
+        document.getElementById("container").append(p)
+
+    </script>
+</body>
+</html>

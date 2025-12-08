@@ -19,6 +19,11 @@
             align-items: flex-start; */
             padding: 10px;
             border: 2px solid brown;
+            gap: 20px;  /* gap serve per dare distanza tra gli elementi flex.*/
+            row-gap: 50px;
+            column-gap: 80px; /* distanza tra colonne*/
+
+            flex-wrap: wrap;   /* contenuto va a capo se non basta spazio nel container */
         }
         .card2 {
             display: flex;
@@ -34,6 +39,7 @@
             align-items: flex-start; */
             padding: 10px;
             border: 2px solid brown;
+            row-gap: 50px;  /* distanza tra righe*/
         }
         p {
             color:red
@@ -77,6 +83,29 @@
                     </ul>
                 </div>
         </div>
+            <div>
+            <p>Spaziatura orizzontale e verticale</p>
+            <div class="box">
+                    
+                    <p>justify-content → allinea sulla riga principale</p>
+                    <ul>
+                        <li>justify-content: flex-start &rarr;   inizio </li>
+                        <li>justify-content: center &rarr;        centro </li>
+                        <li>justify-content: flex-end &rarr;      fine </li>
+                        <li>justify-content: space-between &rarr; spazio tra gli elementi </li>
+                        <li>justify-content: space-around &rarr;  spazio attorno </li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <p>align-items → allinea sulla direzione verticale</p>
+                    <ul>
+                        <li>align-items: flex-start;</li>
+                        <li>align-items: center;</li>
+                        <li>align-items: flex-end;</li>
+                    </ul>
+                </div>
+        </div>
+    
     </div>
     <h2>Versione 1</h2>
     <div class="card2">

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio DOM</title>
+
+    <style>
+        .card {
+            border: 2px solid black;
+            padding: 10px;
+            width: 250px;
+            background-color: #eee;
+            margin-bottom: 20px;
+        }
+
+        .evidenza {
+            background-color: yellow;
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 id="titolo">Titolo originale</h2>
+
+    <div id="contenitore" class="card">
+        <!-- JavaScript dovrà modificare questo -->
+    </div>
+
+    <script>
+        document.getElementById("titolo").textContent = "Titolo modificato da JavaScript"
+        document.getElementById("contenitore").classList.toggle("evidenza")
+        document.getElementById("contenitore").innerHTML = "<p><strong>Ciao Nat!</strong> Questa è una card dinamica.</p>"
+        document.getElementById("contenitore").setAttribute("title", "questa è una card")
+        let x = document.getElementById("contenitore").getAttribute("title")
+        console.log(x)
+        document.getElementById("titolo").classList.add("card")
+
+    </script>
+</body>
+</html>
