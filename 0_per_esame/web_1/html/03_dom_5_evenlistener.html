@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="1">
+        <ul id="lista">
+
+        </ul>
+    </div>
+    <input id="input1" type="text">
+    <button id="b1" >Aggiungi nuovo:</button>
+    <button id="b2" >Aggiungi da input:</button>
+    <script>
+        const bottone1 = document.getElementById("b1")
+        const bottone2 = document.getElementById("b2")
+        const lista = document.getElementById("lista")
+
+        function aggiungi() {
+            let li = document.createElement("li")
+            li.textContent = "nuovo elemento"
+            lista.append(li)
+        }
+        function fromInput() {
+            let li = document.createElement("li")
+            let val = document.getElementById("input1").value
+            li.textContent = val
+            lista.append(li)
+        }
+        bottone1.addEventListener("click", aggiungi)
+        bottone2.addEventListener("click", fromInput)
+
+    </script>
+</body>
+</html>
