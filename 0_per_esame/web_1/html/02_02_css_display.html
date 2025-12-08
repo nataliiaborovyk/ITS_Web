@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            color: blue
+        }
+        .card1 {
+            background-color:rgb(245, 200, 186);
+            width: 200px;
+            padding: 20px;
+            border: 5px solid black;
+            margin: 10px;
+            box-sizing: content-box;
+        }
+        .card2 {
+            background-color:rgb(245, 200, 186);
+            width: 200px;
+            padding: 20px;
+            border: 5px solid black;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+        #b1 {
+            display: inline-block
+        }
+        #p1 {
+            display: none;
+        }
+        button {
+            width: 100px;
+            height: 50px;
+            background-color: rgb(253, 162, 249);
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" class="card1">
+        <h1>Esercizio su display</h1>
+        <p id="p1">Ci sono 4 modi per rapresentare un elemento</p> 
+        <span>display: block,</span>
+        <span>display: inline,</span>
+        <span>display: inline-block,</span>
+        <span>display: none.</span>
+        <button id="b1">Primo</button>
+    </div>
+        <div id="div1" class="card2">
+        <h1>Esercizio su display</h1>
+        <p id="p1">Ci sono 4 modi per rapresentare un elemento</p> 
+        <span>display: block,</span>
+        <span>display: inline,</span>
+        <span>display: inline-block,</span>
+        <span>display: none.</span>
+        <button id="b1">Primo</button>
+    </div>
+    
+</body>
+</html>

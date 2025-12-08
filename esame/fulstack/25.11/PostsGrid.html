@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Posts Grid</title>
+    <style>
+      #root {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .card {
+        background-color: white;
+        border: 1px solid #c9c9c9;
+        padding: 20px;
+        border-radius: 15px;
+        max-width: 350px;
+        box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+      }
+
+      .card p {
+        font-size: 0.8rem;
+      }
+
+      .card ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      .card li {
+        margin: 5px 0;
+        padding: 2px 0;
+      }
+
+      .card h2 {
+        font-size: 1.4rem;
+      }
+
+      .card small {
+        color: cornflowerblue;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- qui andrebbe uno script JS che crea le .card dentro #root -->
+  </body>
+</html>

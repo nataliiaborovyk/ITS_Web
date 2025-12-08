@@ -28,7 +28,7 @@ const GalleriaFoto  = () =>  {
             setStaCaricando(false);
         } 
         };
-        carica();sd
+        carica();
     }, []);
 
     if (staCaricando) 

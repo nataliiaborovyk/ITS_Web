@@ -1,0 +1,76 @@
+<!-- 7. Modal di Avviso
+Richiesto: un pulsante che apre un’area sovrapposta semi-trasparente con un messaggio e
+pulsante di chiusura.Usare: overlay a schermo intero, proprietà display o classi per mostrare/nascondere.
+Risultato: finestra di avviso centrata che copre la pagina. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal di Avviso</title>
+    <style>
+
+        .trasparente {
+
+            position: fixed;   /* l’overlay rimane fermo sullo schermo anche se scrolli ed è sempre davanti a tutto */
+
+            top: 0;
+            left: 0;    /* lo posiziona nell'angolo in alto a sinistra (punto 0,0) */
+
+            width: 100%;
+            height: 100%;   /* lo fa diventare grande quanto tutto lo schermo (100% larghezza e altezza) */
+
+            background-color: rgba(0, 0, 0, 0.5);   /* sfondo nero semi-trasparente: copre la pagina ma la lascia intravedere , 0,5 significa semitrasparente*/
+
+            display: flex;   /* attiva il flexbox, Allinea automaticamente i figli di questo elemento, in modo ordinato */
+
+            justify-content: center;    /* centra orizzontalmente la finestra modale */
+
+            align-items: center;   /* centra verticalmente la finestra modale */
+        }
+
+        .nascosto{
+            display: none;
+        }
+
+        .modal{
+            background-color: rgb(242, 176, 240);
+            padding:30px 20px;
+            border-radius:10px;
+            max-width:300px;
+            text-align: center;
+        }
+
+        button{
+            background-color: rgb(176, 226, 251);
+            width: 100px;
+            font-size:large;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button id="apri">Apri</button>
+
+    <div id="overlay" class="trasparente nascosto">
+        <div id="modal" class="modal">
+            <h2>Maledetto overlay!!!</h2>
+            <button id="chiudi">Chiudi</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById("apri").onclick=function(){
+            document.getElementById("overlay").classList.remove("nascosto");
+        }
+        document.getElementById("chiudi").onclick=function(){
+            document.getElementById("overlay").classList.add("nascosto")
+        }
+        document.getElementById("overlay").onclick=function(qualcosa){
+            if(qualcosa.target === document.getElementById("overlay")){
+                document.getElementById("overlay").classList.add("nascosto")
+            }
+        }
+    </script>
+</body>
+</html>

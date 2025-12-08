@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- lang dice al browser e agli screen reader la lingua del contenuto. -->
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inizio</title>
+</head>
+<body>
+    <header>
+        <h1>Benvenuto nella paggina dove si studia HTML</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#argomenti">Argomenti</a>
+        </nav>
+    </header>
+
+    <section>
+        <div id="card1" class="container">
+            <h2>Punto 1.1.1. Cos’è HTML</h2>
+            <p>HTML è un linguaggio di markup che definisce la struttura di una pagina web.</p>  
+            <p>
+                Una pagina HTML è divisa in head e body: nel head mettiamo le informazioni non visibili come meta, 
+                titolo e fogli di stile; nel body mettiamo il contenuto visibile all’utente.
+            </p>
+        </div>
+        <div id="card2">
+            <a href="chatgpt.com" title="Clicca qui per maggiori informazioni">Studiamo insieme ....</a>
+            <a href="google.com" title="Clicca qui per maggiori informazioni">scegli tu</a>
+            <p>La pagina Html è costruita da:</p>
+            <ul>
+                <li>
+                    head, qui mettiamo informazioni non visibili all'utente come 
+                    <span>meta,</span> 
+                    <span>titolo,</span> 
+                    <span>link ai CSS</span> 
+                    e configurazioni
+                </li>
+                <li>body, qui mettiamo il contenuto visibile agli utenti, testi, immagini, link, bottoni, form, liste ...</li>
+            </ul>
+        </div>
+        <div id="card3" class="container">
+            <h2>I tag principali sono:</h2>
+            <ul>
+                <li>titoli come h1..h6</li>
+                <li>testi come p e span</li>
+                <li>contenitori come div e section</li>
+                <li>link come a e attributo href</li>
+                <li>immagini come img con attributi src e alt</li>
+                <li>liste ordinate ol e non ordinate ul con li</li>
+                <li>form come form, input, button...</li>
+            </ul>
+            <img 
+                hidden
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/960px-HTML5_logo_and_wordmark.svg.png"
+                alt="Logo HTML5">
+        </div>
+        <div id="box" class="card grande">
+            <h3>Informazioni da memorizzare &hearts;</h3>
+            <div data-id="b1" data-utente="Nat" title="info utili">
+                <p style="color:green">Attributi globali</p>
+                <ol>
+                    <li>id - identifica un elemento in modo univoco ed è utile per selezionarlo con js o css</li>
+                    <li>class - serve per far apartenere il contenitore div a una classe di CSS, si puo scegliere piu classi</li>
+                    <li>style - si usa per dare lo stile inline</li>
+                    <li>title - serve per mostrare info utili quando si passa il mouse sopra</li>
+                    <li>hidden - puo nascondere un elemento pero non rimuove dal dom</li>
+                    <li>data - attributi personalizzati, servono per memorizzare info nel html</li>
+                </ol>
+            </div>
+        </div>
+        <div>
+            <h3>Entita html</h3>
+            <ul>
+                <li> &amp;lt; serve per scrivere il simbolo &lt;</li>
+                <li>&amp;gt; serve per scrivere il simbolo &gt;</li>
+                <li>&amp;amp; serve per scrivere &amp;</li>
+                <li>&amp;quot; serve per scrivere &quot;</li>
+                <li>&amp;apos; serve per &apos;</li>
+                <li>&amp;euro; serve per &euro;</li>
+                <li>&amp;rarr; serve per &rarr;</li>
+                <li>&amp;larr; serve per &larr;</li>
+                <li>&amp;hearts; serve per &hearts;</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Struttura avanzata della paggina</h3>
+            <ul>
+                <li>HEADER, contiene pure NAV - collegamenti per la navigazione </li>
+                <li>SECTION - sezione logica della pagina</li>
+                <li>ASIDE - contenuto marginale es. colonna laterale, banner, pubblicita, note</li>
+                <li>FOOTER - copyright, contatti, link legali..</li>
+            </ul>
+        </div>
+    </section>
+    <aside>
+        <p>Sidebar</p> 
+    </aside>
+    <footer>
+        <p>&copy; studiate liberamente</p>
+    </footer>
+
+</body>
+</html>

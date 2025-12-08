@@ -1,0 +1,35 @@
+<!-- 3. Pulsante con Effetto Hover
+Richiesto: realizzare un link con classe btn che si comporta come un pulsante e cambia stile
+quando il mouse passa sopra.
+Usare: classe CSS, pseudo-classe :hover.
+Risultato: pulsante con chiara differenza visiva tra stato normale e passaggio del mouse. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulsante con Effetto Hover</title>
+    <style>
+        .btn{
+            background-color: yellow;
+            color: red;
+            font-size: 30px;
+            font-weight: bold;
+            display: inline-block;
+            padding: 20px 30px;
+            text-align: center;
+            margin: 10px;
+        }
+        .btn:hover{
+            background-color: green;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.google.com" class="btn">Google</a>
+    <a href="facebbok.com" class="btn">FaceBook</a>
+    <span>Cosa scegli?</span>
+</body>
+</html>

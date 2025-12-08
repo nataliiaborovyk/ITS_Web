@@ -1,0 +1,49 @@
+<!-- 6. Contatore
+Richiesto: mostrare un numero in pagina che aumenta ad ogni clic di un pulsante.
+Usare: gestione DOM, variabile JS, aggiornamento testo.
+Risultato: numero aggiornato visivamente ad ogni clic. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .num{
+            width: 205px;
+            background-color: rgb(21, 114, 72);
+            border: 1px solid blue;
+            font-size: large;
+            text-align: center;
+            border-radius: 5px;
+            color:rgb(184, 5, 5);
+        }
+        button{
+            width:100px;
+            background-color: yellow;
+            font-size:large;
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="num" class="num">0</div>
+    <button id="+">+</button>
+    <button id="-">-</button>
+
+    <script>
+        let cont = 0;
+        document.getElementById("+").onclick=function(){
+            cont=cont+1;
+            document.getElementById("num").innerText=cont;
+        }
+        document.getElementById("-").onclick=function(){
+            cont=cont-1;
+            document.getElementById("num").innerHTML="<h3>"+cont+"</h3>";
+        }
+    </script>
+</body>
+</html>

@@ -100,7 +100,7 @@ function App() {
       <GalleriaFoto/>
 
     <h3>Esercizio 9: Gestire Form Complessi con un Singolo Stato</h3>
-      <ModuloContatti></ModuloContatti>
+      <ModuloContatti></ModuloContatti> 
 
 
       {/* <Esercizio_5></Esercizio_5> */}

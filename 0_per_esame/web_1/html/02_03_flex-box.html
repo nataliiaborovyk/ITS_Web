@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card1 {
+            display: flex;
+            flex-direction: column;    /* elementi in colonna */
+            flex-direction: row;      /* default → gli elementi vanno in riga */
+            justify-content: flex-start;   /* inizio */
+            justify-content: center;       /* centro */
+            justify-content: flex-end;     /* fine */
+            justify-content: space-around; /* spazio attorno */
+            justify-content: space-between;/* spazio tra gli elementi */
+            align-items: center;
+            /* align-items: flex-end;
+            align-items: flex-start; */
+            padding: 10px;
+            border: 2px solid brown;
+        }
+        .card2 {
+            display: flex;
+            flex-direction: column;    /* elementi in colonna */
+            /* flex-direction: row;      default → gli elementi vanno in riga */
+            justify-content: flex-start;   /* inizio */
+            justify-content: center;       /* centro */
+            justify-content: flex-end;     /* fine */
+            justify-content: space-around; /* spazio attorno */
+            justify-content: space-between;/* spazio tra gli elementi */
+            align-items: center;
+            /* align-items: flex-end;
+            align-items: flex-start; */
+            padding: 10px;
+            border: 2px solid brown;
+        }
+        p {
+            color:red
+        }
+        .box {
+            background-color: azure;
+            border: 2px solid  blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex-box</h1>
+    <h2>Versione 1</h2>
+    <div class="card1">
+        <div class="box">
+            <p>La direzione: </p>
+            <ul>
+                <li>flex-direction: column &rarr; elementi in colonna </li>
+                <li>flex-direction: row &rarr; default → gli elementi vanno in riga </li>
+            </ul>
+        </div>
+        <div>
+            <p>Spaziatura orizzontale e verticale</p>
+            <div class="box">
+                    
+                    <p>justify-content → allinea sulla riga principale</p>
+                    <ul>
+                        <li>justify-content: flex-start &rarr;   inizio </li>
+                        <li>justify-content: center &rarr;        centro </li>
+                        <li>justify-content: flex-end &rarr;      fine </li>
+                        <li>justify-content: space-between &rarr; spazio tra gli elementi </li>
+                        <li>justify-content: space-around &rarr;  spazio attorno </li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <p>align-items → allinea sulla direzione verticale</p>
+                    <ul>
+                        <li>align-items: flex-start;</li>
+                        <li>align-items: center;</li>
+                        <li>align-items: flex-end;</li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+    <h2>Versione 1</h2>
+    <div class="card2">
+        <div class="box">
+            <p>La direzione: </p>
+            <ul>
+                <li>flex-direction: column &rarr; elementi in colonna </li>
+                <li>flex-direction: row &rarr; default → gli elementi vanno in riga </li>
+            </ul>
+        </div>
+        <div>
+            <p>Spaziatura orizzontale e verticale</p>
+            <div class="box">
+                    
+                    <p>justify-content → allinea sulla riga principale</p>
+                    <ul>
+                        <li>justify-content: flex-start &rarr;   inizio </li>
+                        <li>justify-content: center &rarr;        centro </li>
+                        <li>justify-content: flex-end &rarr;      fine </li>
+                        <li>justify-content: space-between &rarr; spazio tra gli elementi </li>
+                        <li>justify-content: space-around &rarr;  spazio attorno </li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <p>align-items → allinea sulla direzione verticale</p>
+                    <ul>
+                        <li>align-items: flex-start;</li>
+                        <li>align-items: center;</li>
+                        <li>align-items: flex-end;</li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+    
+</body>
+</html>

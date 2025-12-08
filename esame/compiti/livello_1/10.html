@@ -1,0 +1,48 @@
+<!-- 10. Validazione Lunghezza Testo
+Richiesto: se il testo è più corto di una soglia, mostrare un messaggio di errore sotto l’input.
+Usare: controllo lunghezza stringa, manipolazione visibilità del messaggio.
+Risultato: indicazione chiara quando il testo non rispetta i requisiti. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validazione Lunghezza Testo</title>
+    <style>
+        .mes{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input id="input" type="text" placeholder="scrivi qualcosa...">
+    <button id="bot">Verifica</button>
+    <span id="testo"></span>
+    <div id="mes" class="mes">Messagio è troppo corto</div>
+    <br/>
+ 
+
+
+    <script>
+        let input = document.getElementById("input")
+        let bot = document.getElementById("bot")
+        let mes = document.getElementById("mes")
+
+        function verifica (){
+            let text = input.value
+            if (text.length < 10) {
+                mes.style.display = "block"
+                document.getElementById("testo").innerText = input.value
+                input.value = ""
+            } else { 
+                mes.style.display = "none"
+                document.getElementById("testo").innerText = input.value
+                input.value = ""
+            }
+        }
+        bot.onclick = verifica
+    </script>
+
+</body>
+</html>

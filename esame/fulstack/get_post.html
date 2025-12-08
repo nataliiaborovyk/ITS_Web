@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            max-width: 300px;              
+            margin: 20px ;              
+            background-color: #fca4a4;   
+            border-radius: 10px;           
+            padding: 20px;                 
+        }
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="TTT" class="card"></div>
+
+    <div id="NNN"></div>
+    <div id="utente"></div>
+
+    
+    <script>
+        const url = "https://jsonplaceholder.typicode.com/posts/1"
+        const url2 = "https://jsonplaceholder.typicode.com/users/"
+        const url3 = "https://jsonplaceholder.typicode.com/comments"
+
+        const div=document.querySelector("div");
+
+        fetch(url)
+            .then(res=>res.json())
+            .then(post=>{
+                const result1=document.getElementById('TTT')
+                result1.innerHTML = "<h3>"
+                    +post.title+"</h3>"
+                // const result2=document.getElementById('NNN')
+                result1.innerHTML += "<p>"+post.body+"</p>"
+                
+                fetch(url2+post.userId)
+                    .then(res2=>res2.json())
+                    .then(post=>{
+                        let result3=document.getElementById('utente')
+                        result1.innerHTML += "<small>"+post.name+"</small>"
+                        result3.innerHTML = "<h3>"+post.name+"</h3>"
+                    })
+            })
+
+
+            
+        // fetch(url)
+        //     .then(res=>res.json())
+        //     .then(post=>{
+        //         // codice consumatore ed è sempre dentro then
+        //         div.innerHTML=post.title
+        //     })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!-- 9. Aggiunta Elementi Lista
+Richiesto: campo di testo + pulsante; ad ogni invio aggiungere una voce alla lista.
+Usare: createElement, append; input text per contenuto.
+Risultato: lista che cresce dinamicamente. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aggiunta Elementi Lista</title>
+</head>
+<body>
+    <input id="text" type="text" placeholder="scrivi ...">
+    <button id="agiungi">Agiungi</button>
+    <ul id="ul"></ul>
+    <script>
+        let input = document.getElementById("text")
+        let agiungi = document.getElementById("agiungi")
+        let ul = document.getElementById("ul")
+
+        function agiungiInLista(){
+            let qualcosa = input.value;
+            let nuovoEl = document.createElement("li")
+            nuovoEl.innerText = qualcosa
+            ul.appendChild(nuovoEl)
+            input.value = ""
+        }
+        agiungi.onclick=agiungiInLista
+    </script>
+</body>
+</html>
