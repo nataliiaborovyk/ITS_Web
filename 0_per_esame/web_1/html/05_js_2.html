@@ -1,0 +1,52 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input1" type="text" placeholder="Inserisci ...">
+    <button id="but1">Verifica</button>
+    <div id="d1"></div>
+    <ul id="ul1"></ul>
+    
+
+
+    <script>
+        let input1 = document.getElementById("input1")
+        let div1 = document.getElementById("d1")
+        let ul1 = document.getElementById("ul1")
+        let but1 = document.getElementById("but1")
+
+        //1
+        
+
+        const create_li = () => {
+            let li = document.createElement("li")
+            return li
+        }
+
+        const f1 =() => {
+
+            let eta = Number(input1.value)
+            let li = create_li()
+            if (eta < 18){
+                li.textContent = eta + " Minorenne"
+            } else if (eta <= 65) { 
+                li.textContent = eta + " Adulto"
+            } else {
+                li.textContent = eta + " Senior"
+            }
+            ul1.append(li)
+            input1.value = ""
+        }
+
+        but1.addEventListener("click", f1)
+
+    </script>
+</body>
+</html>

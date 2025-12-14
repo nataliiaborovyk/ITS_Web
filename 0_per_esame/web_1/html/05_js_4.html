@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            display: flex;
+            flex-direction: column;
+            background-color: yellow;
+            width: 200px
+            
+        }
+    </style>
+</head>
+<body>
+    <input id="input1" type="text" placeholder="Scrivi qui...">
+    <button id="but1">Verifica</button>
+    <button id="but2">Solo pari</button>
+    <button id="but3">Al contrario</button>
+    <div class="card">
+        <input id="input2" type="text" placeholder="Scrivi a: ">
+        <input id="input3" type="text" placeholder="Scrivi b: ">
+        <button id="but4">Somma</button>
+        <div id="div2"></div>
+        <div id="div3"></div>
+    </div>
+    <ul id="ul1"></ul>
+
+
+    <script>
+        let input1 = document.getElementById("input1")
+        let but1 = document.getElementById("but1")
+        let but2 = document.getElementById("but2")
+        let but3 = document.getElementById("but3")
+        let ul1 = document.getElementById("ul1")
+
+
+        let input2 = document.getElementById("input2")
+        let input3 = document.getElementById("input3")
+        let but4 = document.getElementById("but4")
+        let div2 = document.getElementById("div2")
+
+        const create_li = () =>{
+            let li = document.createElement("li")
+            return li
+        }
+
+        const f3 = () => {
+            let val = Number(input1.value)
+                      
+
+            for (let i=1; i<=val; i++){
+                let li = create_li()            // devo creare un nuolo li per ogni ciclo
+                li.textContent = i
+                ul1.append(li)
+            }
+            input1.value = ""
+        }
+
+        const f4 = () => {
+            let val = Number(input1.value)
+            
+            for (let i=1; i<=val; i++){
+                if (i%2==0){
+                    let li = create_li()
+                    li.textContent = i
+                    ul1.append(li)
+                }
+            }
+            input1.value=""
+        }
+
+        const f5 = () => {
+            let val = Number(input1.value)
+            let i = val
+            while( i >= 1){
+                let li = create_li()
+                li.textContent = i
+                ul1.append(li)
+                i--;
+            }
+            input1.value=""
+        }
+
+        const somma = (a, b) => {
+            return a + b
+        }
+
+        const f7 = () => {
+            let val1 = Number(input2.value)
+            let val2 = Number(input3.value)
+            let x = somma(val1, val2)
+            let h2 = document.createElement("h2")
+            h2.textContent = x
+            div2.append(h2)
+
+            let h6 = document.createElement("h6")
+            h6.innerHTML = "<strong>Result: " + x + "</strong>"
+            div3.append(h6)
+
+            input2.value=""
+            input3.value=""
+        }
+        but1.addEventListener("click", f3)
+        but2.addEventListener("click", f4)
+        but3.addEventListener("click", f5)
+        but4.addEventListener("click", f7)
+    </script>
+</body>
+</html

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input1" type="text" placeholder="Scrivi qui...">
+    <button id="but1">Verifica</button>
+    <ul id="ul1"></ul>
+
+    <script>
+        let input1 = document.getElementById("input1")
+        let but1 = document.getElementById("but1")
+        let ul1 = document.getElementById("ul1")
+
+        const create_li = () =>{
+            let li = document.createElement("li")
+            return li
+        }
+
+        const f2 = () => {
+            let val = Number(input1.value)
+            let li = create_li()
+
+            if (val > 0){
+                li.textContent = "Numero positivo"
+            } else if (val < 0) {
+                li.textContent = "Numero negativo"
+            } else if (val === 0) {
+                li.textContent = "Zero"
+            }
+            ul1.append(li)
+            input1.value = ""
+        }
+
+        but1.addEventListener("click", f2)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+    <div>
+        <button id="but1">Mostra numeri</button>
+        <ul id="ul1"></ul>
+    </div>
+    <div>
+        <button id="but2">Mostra nomi</button>
+        <ul id="ul2"></ul>
+    </div>
+    <div>
+        <button id="but3">Quadrati</button>
+        <ul id="ul3"></ul>     
+    </div>
+    <div>
+        <button id="but4">Pari</button>
+        <ul id="ul4"></ul>     
+    </div>
+        <div>
+        <button id="but5">Maggiorenni</button>
+        <ul id="ul5"></ul>     
+    </div>
+    </div>
+    
+
+
+    <script>
+        let ul1 = document.getElementById("ul1")
+        let ul2 = document.getElementById("ul2")
+        let but1 = document.getElementById("but1")
+        let but2 = document.getElementById("but2")
+
+        let ul3 = document.getElementById("ul3")
+        let but3 = document.getElementById("but3")
+
+        let ul4 = document.getElementById("ul4")
+        let but4 = document.getElementById("but4")
+
+        let ul5 = document.getElementById("ul5")
+        let but5 = document.getElementById("but5")
+
+        let numeri = [1, 2, 3, 4, 5]
+        let nomi = ["Luca", "Anna", "Marco"]
+        let persone = [
+            { nome: "Anna", eta: 17 },
+            { nome: "Luca", eta: 25 },
+            { nome: "Marco", eta: 15 },
+            { nome: "Sara", eta: 30 }
+            ]
+
+
+        const create_li = () => {
+            let li = document.createElement("li")
+            return li
+        }
+
+        const f8 = () => {
+            ul1.innerHTML = ""
+            for (let n of numeri){
+                let li = create_li()
+                li.textContent = n
+                ul1.append(li)
+            }
+        }
+
+        const f9 = () => {
+            let nomi2 = nomi.filter(n=>n.length>4)
+                for (let n of nomi2){
+                let li = create_li()
+                li.textContent = n
+                ul2.append(li)
+            }
+        }
+
+        const f10a = () => {
+            let doppi = numeri.map(n=> {
+                let li = create_li()
+                li.innerHTML = "<h6>" + n**2 + "</h6>"
+                ul3.append(li)
+                return n**2
+            })
+            console.log(doppi)
+        }
+
+        const f10 = () => {
+            let doppi = numeri.map(n=> n**2)
+            doppi.forEach(n=>{
+                let li = create_li()
+                li.innerHTML = "<h6>" + n**2 + "</h6>"
+                ul3.append(li)          
+            })
+        }
+
+        const f11 = () => {
+            let pari = numeri.filter(n=> n%2==0)
+            for (let i=0; i<pari.length; i++){
+                let li = create_li()
+                li.innerHTML = "<strong>" + pari[i] + "</strong>"
+                ul4.append(li)
+            }
+        }
+
+        const f12 = () => {
+            let magioreni = persone.map(n=>{
+                if(n.eta > 18){
+                    let li = create_li()
+                    li.innerHTML = "<h6> Nome: " + n.nome + "  Eta: " + n.eta + "</h6>"
+                    ul5.append(li)
+                    return n.nome
+                }
+            })
+        }
+
+        const f13 = () => {
+        let maggiorenni = persone.filter(p => p.eta >= 18)
+
+        maggiorenni.forEach(n=>{
+            let li = create_li()
+            li.textContent = n.nome + " " + n.eta
+            ul5.append(li)
+        })
+        }
+
+
+        but1.addEventListener("click", f8)
+        but2.addEventListener("click", f9)
+        but3.addEventListener("click", f10)
+        but4.addEventListener("click", f11)
+        but5.addEventListener("click", f13)
+    </script>
+</body>
+</html>

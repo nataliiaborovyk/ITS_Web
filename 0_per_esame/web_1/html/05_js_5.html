@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input1" type="text" placeholder="Scrivi qui ...">
+    <button id="but1">Saluta</button>
+    <div id="div1"></div>
+
+    <script>
+        let input1 = document.getElementById("input1")
+        let but1 = document.getElementById("but1")
+        let div1 = document.querySelector("#div1")
+
+        let saluto = "Ciao, "
+        const f6 = () => {
+            let val = input1.value 
+            let h2 = document.createElement("h2")
+            h2.textContent = saluto + val
+            div1.append(h2)
+            input1.value = ""
+        }
+        but1.addEventListener("click", f6)
+    </script>
+</body>
+</html>
