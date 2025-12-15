@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            display: flex;
+            flex-direction: column;
+            width:350px
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <button id="but1">Stampa</button>
+        <ul id="ul1"></ul>
+    </div>
+    
+
+    <script>
+        const persone = [
+            { nome: "Anna", eta: 20, citta: "Roma" },
+            { nome: "Luca", eta: 25, citta: "Milano" },
+            { nome: "Marco", eta: 15, citta: "Roma" },
+            { nome: "Sara", eta: 30, citta: "Torino" },
+            { nome: "Nina", eta: 18, citta: "Roma" }
+            ]
+
+        let but1 = document.getElementById("but1")
+        let ul1 = document.getElementById("ul1")
+
+        const filtro = () => {
+            let mag_roma = persone.filter(n=>n.eta >= 18).filter(n=>n.citta==="Roma")
+            let nuovo_array = mag_roma.map(n=>{
+                return "Nome: " + n.nome + " | Eta: " + n.eta 
+            })
+            nuovo_array.forEach(n => {
+                let li = document.createElement("li")
+                li.innerHTML = "<strong>" + n +"</strong>"
+                ul1.append(li)
+            })
+            console.log(mag_roma)
+            console.log(nuovo_array)
+        }
+
+        but1.addEventListener("click", filtro)
+    </script>
+</body>
+</html>

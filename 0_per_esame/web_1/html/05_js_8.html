@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const f1 = (a, b) => {
+            // if (a === b) {
+            //     return true 
+            // } else {
+            //     return false
+            // }
+            return a===b
+        }
+        document.write(f1(5,5))
+
+
+
+        const f2 = (a) => {
+            return a >= 1 && a <= 7
+        }
+
+        const f3 = (n) => {
+            if (f2(n) === false) {
+            return "Peccato, non posso indovinare il giorno."
+            }
+
+            switch (n) {
+            case 1:
+                return "Lunedì"
+            case 2:
+                return "Martedì"
+            case 3:
+                return "Mercoledì"
+            case 4:
+                return "Giovedì"
+            case 5:
+                return "Venerdì"
+            case 6:
+                return "Sabato"
+            case 7:
+                return "Domenica"
+            default:
+                return "Peccato, non posso indovinare il giorno."
+            }
+            // switch (n) {
+            //     case 1:
+            //     giorno = "Lunedì"
+            //     break
+            //     case 2:
+            //     giorno = "Martedì"
+            //     break
+            //     case 3:
+            //     giorno = "Mercoledì"
+            //     break
+            //     case 4:
+            //     giorno = "Giovedì"
+            //     break
+            //     case 5:
+            //     giorno = "Venerdì"
+            //     break
+            //     case 6:
+            //     giorno = "Sabato"
+            //     break
+            //     case 7:
+            //     giorno = "Domenica"
+            //     break
+            // }
+
+            // return giorno
+        }
+
+        document.write(f3(2))
+
+
+    </script>
+</body>
+</html>

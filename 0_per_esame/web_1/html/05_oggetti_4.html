@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+        .card {
+            display: flex;
+            flex-direction: column;
+            width:350px;
+            margin: 50px
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <button id="but1">Stampa</button>
+        <ul id="ul1"></ul>
+    </div>
+
+    <script>
+        let but1 = document.getElementById("but1")
+        let ul1 = document.getElementById("ul1")
+        const prodotti = [
+        { nome: "Mouse", prezzo: 20, categoria: "tech" },
+        { nome: "Tastiera", prezzo: 60, categoria: "tech" },
+        { nome: "Libro", prezzo: 15, categoria: "studio" },
+        { nome: "Zaino", prezzo: 40, categoria: "studio" }
+        ]
+
+        let cari = prodotti.filter(({prezzo}) => prezzo >= 30)
+        let array = cari.map(({nome, prezzo}) => {
+            return nome + " - " + prezzo + "$/€"
+        })
+
+        const stampa = (qualsiasi_array) => {
+            qualsiasi_array.forEach(el => {
+                let li = document.createElement("li")
+                li.textContent = el
+                ul1.append(li)
+            });
+        }
+
+        const finale = () => {
+            ul1.innerHTML = ""
+            stampa(array)
+        }
+
+        but1.addEventListener("click", finale)
+    </script>
+</body>
+</html>

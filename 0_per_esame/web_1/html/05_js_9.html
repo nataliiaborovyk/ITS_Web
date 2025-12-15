@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 12px;
+            width: 360px;
+            margin: 40px auto;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align:center;">Gioco: indovina il numero!</h2>
+        <div class="card1">
+            <input id="input1" type="number" placeholder="0...100">
+            <button id="but1">Controlla</button>
+        </div>
+        <div class="card1">
+            <div id="tentativ">Tentetivi</div>
+            <input id="output" type="number" value="0" disabled>           
+        </div>
+        <div id="mes" class="card1"></div>
+        <div class="card1">
+            <button id="but2">Nuovo gioco</button>
+        </div>
+    </div>
+    <script>
+        
+        let input1 = document.getElementById("input1")
+        let output = document.getElementById("output")
+        let but1 = document.getElementById("but1")
+        let but2 = document.getElementById("but2")
+        let mes = document.getElementById("mes")
+
+        let segreto = 0
+        let tentativi = 0
+        let gioco_finito = false
+
+        const nuovo_gioco  = () => {
+            segreto = Math.floor(Math.random() * 101)
+            tentativi = 0
+            gioco_finito = false
+
+            input1.value = ""
+            mes.textContent = ""
+            output.value = "0"
+
+            input1.focus()
+        }
+
+        const gioco = () => {
+            if (gioco_finito){
+                return;
+            }
+            let val = Number(input1.value)
+
+            if (val < 0 || val > 100){
+                mes.textContent = "deve essere tra 0 è 100"
+            } else if (val < segreto ) {
+                mes.textContent = "Troppo piccolo"
+            } else if (val > segreto){
+                mes.textContent = "Troppo grande"
+            } else if (val === segreto){
+                mes.textContent = "Hai indovinato"
+                gioco_finito = true
+            }
+            tentativi += 1
+            output.value = tentativi
+            input1.value = ""
+            input1.focus()
+        }
+
+        but1.addEventListener("click", gioco)
+        but2.addEventListener("click", nuovo_gioco)
+    </script>
+</body>
+</html>

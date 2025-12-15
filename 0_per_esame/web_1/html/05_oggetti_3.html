@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const libro = {
+            titolo: "Il Signore degli Anelli",
+            autore: "Tolkien",
+            anno: 1954
+            }
+
+        const studenti = [
+        { nome: "Anna", voto: 28 },
+        { nome: "Luca", voto: 18 },
+        { nome: "Marco", voto: 30 }
+        ]
+
+
+        const stampatitolo = ({titolo}) => {
+            console.log(titolo)
+            document.write(titolo)
+        }
+        stampatitolo(libro)
+
+        studenti.forEach(({nome, voto}) => {
+            console.log(nome, voto)
+        })
+    </script>
+</body>
+</html>
