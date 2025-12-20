@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Position Demo</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    margin: 0;
+}
+
+/* ------------------ BOX BASE ------------------ */
+.box{
+    padding: 15px;
+    margin: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+/* STATIC ------------------------------------------------*/
+.static{
+    background: #3498db;
+}
+
+/* RELATIVE ---------------------------------------------*/
+.relative{
+    background: #9b59b6;
+    position: relative;
+    top: 50px;    
+    left: 50px;
+}
+
+/* CONTAINER PER ABSOLUTE -------------------------------*/
+.container{
+    border: 3px solid black;
+    margin:20px;
+    height: 200px;
+    position: relative;   /* IMPORTANTE per absolute */
+}
+
+/* ABSOLUTE ---------------------------------------------*/
+.absolute{
+    background: #e67e22;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+}
+
+/* FIXED ------------------------------------------------*/
+.fixed{
+    background: #2ecc71;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+}
+
+/* STICKY ----------------------------------------------*/
+.sticky{
+    background: #c0392b;
+    position: sticky;
+    top: 0;
+}
+
+/* Z-INDEX DEMO ----------------------------------------*/
+.z-box{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+}
+
+.z1{
+    background: rgba(52,152,219,0.8);
+    bottom:50px;
+    left:20px;
+    z-index: 1;
+}
+
+.z2{
+    background: rgba(231,76,60,0.8);
+    bottom:80px;
+    left:80px;
+    z-index: 10;
+}
+
+.big-space{
+    height: 600px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1 style="text-align:center">DEMO POSITION + Z-INDEX</h1>
+
+
+<!-- STATIC -->
+<div class="box static">
+    position: static (default)  
+    → sta nel flusso normale, non si può spostare con top/left
+</div>
+
+<!-- STICKY -->
+<div class="box sticky">
+    position: sticky  
+    → scendi un po’ e vedrai che resta incollato in alto
+</div>
+<div class="big-space">
+    Scorri... scorri... scorri...
+</div>
+
+
+<div class="box static">
+    position: static (default)  
+    → sta nel flusso normale, non si può spostare con top/left
+</div>
+<div class="box static">
+    position: static (default)  
+    → sta nel flusso normale, non si può spostare con top/left
+</div>
+<div class="box static">
+    position: static (default)  
+    → sta nel flusso normale, non si può spostare con top/left
+</div>
+<div class="box static">
+    position: static (default)  
+    → sta nel flusso normale, non si può spostare con top/left
+</div>
+<div class="box static">
+    position: static (default)  
+    → sta nel flusso normale, non si può spostare con top/left
+</div>
+<div class="box static">
+    position: static (default)  
+    → sta nel flusso normale, non si può spostare con top/left
+</div>
+<div class="box static">
+    position: static (default)  
+    → sta nel flusso normale, non si può spostare con top/left
+</div>
+<div class="box static">
+    position: static (default)  
+    → sta nel flusso normale, non si può spostare con top/left
+</div>
+<div class="box static">
+    position: static (default)  
+    → sta nel flusso normale, non si può spostare con top/left
+</div>
+<div class="box static">
+    position: static (default)  
+    → sta nel flusso normale, non si può spostare con top/left
+</div>
+<div class="box static">
+    position: static (default)  
+    → sta nel flusso normale, non si può spostare con top/left
+</div>
+
+
+<!-- RELATIVE -->
+<!-- <div class="box relative">
+    position: relative  
+    → mantiene il suo spazio originale, ma è VISIVAMENTE spostato
+</div> -->
+
+
+<!-- ABSOLUTE DEMO -->
+<!-- <div class="container">
+    Questo è il CONTENITORE (ha position: relative)
+<div class="box static">
+    position: static (default)  
+    → sta nel flusso normale, non si può spostare con top/left
+</div>
+    <div class="box absolute">
+        position: absolute  
+        → esce dal flusso, si posiziona rispetto al contenitore
+    </div>
+</div> -->
+
+
+
+
+
+<!-- FIXED -->
+<div class="box fixed">
+    position: fixed  
+    → resta SEMPRE qui anche quando scrolli
+</div>
+
+
+<!-- Z-INDEX DEMO -->
+<h2 style="margin-left:20px">Z-INDEX Demo</h2>
+<p style="margin-left:20px">La scatola rossa sta sopra perché ha z-index più alto</p>
+
+<div class="z-box z1"> z-index: 11 </div>
+<div class="z-box z2"> z-index: 10 </div>
+
+
+<div class="big-space"></div>
+
+</body>
+</html>
