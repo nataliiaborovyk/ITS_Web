@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media (max-width: 600px){
+            .card1 {
+            flex-direction: column;
+        }}
+        .card1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center
+        }
+        .but {
+            width: 100px
+        }
+    </style>
+</head>
+<body>
+    <label for="inp1">versione con for=.. </label>
+    <input id="inp1" type="text" placeholder="Scrivi qui..">
+
+    <label >
+        Versione anidata
+    <input id="inp2" type="text" placeholder="Scrivi qui..">
+    </label>
+
+
+    <div>
+<!-- ESERCIZIO 1 — Form semplice 
+Obiettivi:
+    usare main
+    usare label
+    usare alt
+    usare button type="submit"
+ Crea una pagina con:
+    header con titolo
+    main con:
+    form di login con:
+    email
+    password
+    bottone “Accedi”
+    footer con copyright
+Regole:
+    tutti gli input devono avere label
+    button deve essere type="submit"
+    niente JavaScript in questo esercizio -->
+    <h1>Esercizio 1. Form semplice</h1>
+
+    <header>
+        <h2>Esercizi Introduttivi nei tag semantici</h2>
+        <nav>link1....</nav>
+    </header>
+    <main>
+        <article>
+            <h4></h4>
+        </article>
+        <section>
+            <h5> Crea una pagina con:</h5>
+            <p>    header con titolo 
+    main con:  
+    form di login con: 
+    email 
+    password 
+    bottone “Accedi” 
+    footer con copyright</p>
+        </section>
+        <section>
+            <h5>Regole</h5>
+            <p>tutti gli input devono avere label 
+    button deve essere type="submit" 
+    niente JavaScript in questo esercizio </p>
+        </section>
+        <aticle>
+            <h4>Titolo</h4>
+            <form method="POST" action="https://example.com">
+                <label for="nome">Scrivi nome</label>
+                <input id="nome"  type="text" placeholder="nome" nome="nome">
+
+                <label for="email">Scrivi Email</label>
+                <input id="email"  type="email" placeholder="Email" nome="email">
+                
+                <label for="pasword">Scrivi Pasword</label>
+                <input id="pasword" type="password" placeholder="Pasword (number)" name="pasword">
+
+                <label for="eta">Scrivi eta</label>
+                <input id="eta"  type="number" placeholder="eta" nome="eta">
+
+                <button id="but1" type="submit">Accedi</button>
+            </form>
+            <form>
+                <label for="nome"></label>
+                <input id="nome" name="nome" placeholder="nome">
+                <label for="textarea">Scrivi il messaggio</label>
+                <textarea id="textarea" nome="textarea"  row="5" maxlength="100" placeholder="Scrivi qui..."></textarea>
+                <button id="but1" type="submit">Invia</button>
+            </form>
+        </aticle>
+        <section>
+            <form>
+            <fieldset>
+                <legend>Dati personali</legend>
+
+                <label for="nome" required>Nome</label>
+                <input id="nome" name="nome">
+
+                <label for="eta">Età</label>
+                <input id="eta" name="eta" type="number">
+                <button id="but1" type="submit">Invia</button>
+
+            <select name="citta"  >
+            <option value="" selected disabled>Scegli citta</option>
+            <option value="roma">Roma</option>
+            <option value="milano">Milano</option>
+            <label>
+                <input type="checkbox" name="newsletter">
+                Iscriviti alla newsletter
+                </label>
+
+            </select>
+            </fieldset>
+            </form>
+
+        </section>
+        <br>
+        <section>
+            <select name="citta"  >
+            <option value="" selected disabled>Scegli citta</option>
+            <option value="roma">Roma</option>
+            <option value="milano">Milano</option>
+            </select>
+        </section>
+        <section>
+            <fieldset>
+                <legend>Sceli le lingue</legend>
+                <p>Se non c'è il nome non viene inviata checkbox</p>
+                <label>
+                    Italiano
+                    <input type="checkbox" value="it" name="lingue" checked>
+                </label>
+                <label>
+                    Inglese
+                     <input type="checkbox" value="en" name="lingue">  
+                </label>
+
+            </fieldset>
+            <fieldset class="card1">
+                <legend>Seleziona interessi</legend>
+                <lable>sport
+                    <input type="checkbox" value="sport" name="interessi">
+                </lable>
+                <lable>
+                    musica
+                    <input type="checkbox" value="musica" name="interessi">
+                </lable>
+                <lable>
+                    Informatica
+                    <input type="checkbox" value="informatica" name="interessi">
+                </lable>
+                
+                
+                <button type="submit" class="but">Invia</button>
+            </fieldset>
+        </section>
+        <section>
+            <fieldset>
+                <label>
+                    Maschio
+                    <input type="radio" value="m" name="genere">
+                </label>
+                <label>
+                    Femmina
+                    <input type="radio" value="f" name="genere">
+                </label>
+                <button type="submit" class="but" >Invia</button>
+            </fieldset>
+        </section>
+
+    </main>
+    <footer>
+        <div>link chat</div>
+        <div>contatti</div>
+        <div>copyright</div>
+    </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="but1">Carica</button>
+    <p id="p1"></p>
+
+    <button id="but2">Carica2</button>
+    <p id="p2"></p>
+
+    <script>
+        let but1 = document.getElementById("but1")
+        let p1 = document.getElementById("p1")
+
+        let but2 = document.getElementById("but2")
+        let p2 = document.getElementById("p2")
+
+        const url = "https://jsonplaceholder.typicode.com/todos/1"
+
+        const carica = () => {
+            fetch(url)
+                .then(response => response.json())
+                .then(data => p1.textContent= data.title)
+        }
+
+        async function carica2() {
+            const res = await fetch(url)
+            const data = await res.json()
+            p2.textContent= data.title
+        }
+        but1.addEventListener("click", carica)
+        but2.addEventListener("click", carica2)
+    </script>
+</body>
+</html>

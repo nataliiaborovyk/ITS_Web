@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="inp1" >
+
+    <script>
+        let inp1 = document.getElementById("inp1")
+        if (inp1.value){
+            console.log(inp1.value)
+        } else if (!inp1.value){
+            console.log("manca valore")
+        }
+
+        let eta = 48
+        let mes = eta >= 18 ? "maggiorenne" : "minorenne"
+        console.log(mes)
+        console.log(eta>18 ? "maggiorenne" : "minorenne")
+
+        eta && console.log(eta)
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="inp1" type="text">
+    <p id="p1"></p>
+    <fieldset id="cit">
+        <legend>Citta</legend>
+        <label>
+            Roma
+            <input type="checkbox" name="citta" value="roma">
+        </label>
+        <label>
+            Milano
+            <input type="checkbox" name="citta" value="milano">
+        </label>
+        <p id="p2"></p>
+    </fieldset>
+
+    <fieldset>
+        <label>Sceli lingua</label>
+        <select name="lingua"  id="sel1">
+            <option value="it">Italiano</option>
+            <option value="en">Inglese</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <form id="f1">
+        <input type="text" id="inf1">
+        <input type="password" id="pasw">
+        <button id="but2" type="submit">Invia</button>
+        </form>
+    </fieldset>
+
+
+    <script>
+        let inp1 = document.getElementById("inp1")
+        let p1 = document.getElementById("p1")
+        let cb = document.getElementById("cit")
+        let p2 = document.getElementById("p2")
+        let sel1 = document.getElementById("sel1")
+        let inf1 = document.getElementById("inf1")
+        let pasw = document.getElementById("pasw")
+        let f1 = document.getElementById("f1")
+        let but2 = document.getElementById("but2")
+
+        inp1.addEventListener("input", function(event){
+            p1.textContent = inp1.value
+            console.log("scrive  " + inp1.value)
+        })
+
+        cb.addEventListener("change", function(event){
+            console.log("cambia ")
+            const scelti = document.querySelectorAll('input[name="citta"]:checked')
+            let valori = []
+            scelti.forEach((c)=>{valori.push(c.value)})
+            const testo = valori.join(", ")
+            p2.textContent = testo
+        })
+
+        sel1.addEventListener("change", function(event){
+            const valore = sel1.value
+            console.log("select "+valore)
+        })
+
+        f1.addEventListener("submit", function(event){
+            event.preventDefault()
+            console.log(inf1.value)
+            console.log(pasw.value)
+        })
+    </script>
+</body>
+</html>

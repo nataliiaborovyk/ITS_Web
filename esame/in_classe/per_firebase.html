@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input1"  type="text">
+    <button id="but1"> Add</button>
+    <button id="but2">Get Dati</button>
+
+    <div id="div1">
+        <ul id="ul1"></ul>
+    </div>
+    <script>
+        const url = "https://progettazione2-88fca-default-rtdb.europe-west1.firebasedatabase.app/tasks/"
+        let input1 = document.getElementById("input1")
+        let but1 = document.getElementById("but1")
+        let div1 = document.getElementById("div1")
+        let ul1 = document.getElementById("ul1")
+        let but2 = document.getElementById("but2")
+
+        const add = () => {
+            const newTask = {task: input1.value, done:false}
+            fetch(url+".json", {
+                method:"Post",
+                headers:{"content-Type":"application/json"},
+                body: JSON.stringify({newTask})
+            })
+                .then(response=>response.json())
+                .then(post=>console.log(post 
+                    
+                ))
+        }
+
+        
+        async function get(){
+            const response = await fetch(url+".json")
+            const data = await response.json()
+            console.log(data)
+
+            if(!data){
+                console.log("Nsuun dato") 
+                return
+            }
+            ul1.innerHTML = ""
+            const tasks = Object.keys(data).map((id)=>({id, ...data[id]}))
+            tasks.forEach(
+                (t) => {
+                    let li = create_li()
+                    li.innerHTML = "<p>"+t.newTask.task+"</p>"
+                    ul1.append(li)
+                    console.log(li)
+                    
+                }
+                // (t)=>{
+                //     div1.innerHTML += "<p>"+t.task+"</p>"
+                // }
+            )
+            }
+               
+
+        const create_li = () => {
+            let li = document.createElement("li")
+            return li
+        }
+
+        but1.addEventListener("click", add)
+        but2.addEventListener("click", get)
+    </script>
+</body>
+</html>
