@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="todo">TODO</button>
+    <p id="mes"></p>
+    <p id="dati"></p>
+
+    <script>
+        let todo = document.getElementById("todo")
+        let mes = document.getElementById("mes")
+        let dati = document.getElementById("dati")
+        let url ="https://jsonplaceholder.typicode.com/todos/1"
+
+        const carica = () => {
+            fetch(url)
+                .then(res=>res.json())
+                .then(data=>{
+                    dati.textContent = data.title
+                })
+        }
+
+        async function carica2(){
+            try {
+                mes.textContent = "Caricamento"
+                dati.textContent = ""
+                const res = await fetch(url)
+                if (!res.ok){
+                    throw new Error("Errore")
+                }
+                const data = await res.json()
+                dati.textContent= data && data.title ? data.title : "Nessun titolo"
+                mes.textContent ="Caricamento completato"
+            } catch (err){
+                mes.textContent = "Errore caricamento"
+            }
+        }
+
+        todo.addEventListener("click", carica2)
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <button id="todo">TODO</button>
+    <p id="mes"></p>
+    <ul id="dati"></ul>
+
+    <script>
+        let todo = document.getElementById("todo")
+        let mes = document.getElementById("mes")
+        let ul = document.getElementById("dati")
+        let url ="https://jsonplaceholder.typicode.com/todos?_limit=5"
+
+
+
+        async function carica(){
+            ul.innerHTML = ""
+            try{
+                mes.textContent = "Caricamento"
+                const res = await fetch(url)
+                if (!res.ok){
+                    throw new Error("non c'è internet")
+                }
+
+                const data = await res.json()
+
+                data.forEach((el)=>{
+                    let li = document.createElement("li")
+                    li.textContent = el.title
+                    ul.append(li)
+                })
+                mes.textContent = ""
+                
+            }catch(err){
+                mes.textContent = "cariccamento fallito"
+            }
+
+            
+        }
+
+
+        todo.addEventListener("click", carica)
+    </script>
+</body>
+</html>
