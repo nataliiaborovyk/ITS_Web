@@ -24,42 +24,34 @@
         const add = () => {
             const newTask = {task: input1.value, done:false}
             fetch(url+".json", {
-                method:"Post",
-                headers:{"content-Type":"application/json"},
-                body: JSON.stringify({newTask})
-            })
+                                method:"Post",
+                                headers:{"content-Type":"application/json"},
+                                body: JSON.stringify({newTask})
+                            })
                 .then(response=>response.json())
                 .then(post=>console.log(post 
-                    
                 ))
         }
 
-        
         async function get(){
             const response = await fetch(url+".json")
             const data = await response.json()
-            console.log(data)
 
             if(!data){
                 console.log("Nsuun dato") 
                 return
             }
             ul1.innerHTML = ""
+
             const tasks = Object.keys(data).map((id)=>({id, ...data[id]}))
             tasks.forEach(
                 (t) => {
                     let li = create_li()
                     li.innerHTML = "<p>"+t.newTask.task+"</p>"
                     ul1.append(li)
-                    console.log(li)
-                    
+                    console.log(li)   
                 }
-                // (t)=>{
-                //     div1.innerHTML += "<p>"+t.task+"</p>"
-                // }
-            )
-            }
-               
+            )}               
 
         const create_li = () => {
             let li = document.createElement("li")

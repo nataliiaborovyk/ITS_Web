@@ -1,0 +1,101 @@
+<!-- 1. Definisci un oggetto "studente" con le seguenti proprietà:
+- nome: una stringa con il nome dello studente
+- cognome: una stringa con il cognome dello studente
+- voto: un numero che rappresenta il voto dello studente
+2. Aggiungi un metodo all'oggetto "studente" chiamato "calcolaMedia" che calcola la media di due voti passati
+come argomenti e restituisce il risultato.
+3. Crea un nuovo oggetto "studente1" utilizzando l'oggetto "studente" come modello. Assegna valori alle
+proprietà "nome", "cognome" e "voto".
+4. Chiama il metodo "calcolaMedia" sull'oggetto "studente1" passando due voti come argomenti. Stampa il
+risultato.
+5. Crea un altro oggetto "studente2" utilizzando l'oggetto "studente" come modello. Assegna valori alle
+proprietà "nome", "cognome" e "voto".
+6. Chiama il metodo "calcolaMedia" sull'oggetto "studente2" passando due voti come argomenti. Stampa il
+risultato.
+7. Confronta i voti dei due studenti ("studente1" e "studente2") e stampa un messaggio che indica quale
+studente ha ottenuto un voto più alto.
+8. Modifica il voto dello "studente1" e del "studente2" assegnando nuovi valori alla proprietà "voto".
+9. Chiama nuovamente il metodo "calcolaMedia" sui due studenti con i nuovi voti. Stampa i nuovi risultati.
+10. Confronta i nuovi voti dei due studenti e stampa un messaggio che indica quale studente ha ottenuto un voto
+più alto. -->
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Oggetto Studente</title>
+</head>
+<body>
+
+  <h2>Esercizio Studenti</h2>
+  <pre id="out"></pre>
+
+<script>
+
+  // 1. Definizione oggetto "studente"
+  const studente = {
+    nome: "",
+    cognome: "",
+    voto: 0,
+
+    // 2. Metodo calcolaMedia
+    calcolaMedia: function(v1, v2){
+      return (v1 + v2) / 2;
+    }
+  };
+
+  const out = document.getElementById("out");
+
+  // 3. Crea studente1
+  const studente1 = Object.create(studente);
+  studente1.nome = "Mario";
+  studente1.cognome = "Rossi";
+  studente1.voto = 28;
+
+  // 4. Media studente1
+  const media1 = studente1.calcolaMedia(25, 30);
+  out.innerText += `Media studente1 (${studente1.nome}): ${media1}\n`;
+
+  // 5. Crea studente2
+  const studente2 = Object.create(studente);
+  studente2.nome = "Anna";
+  studente2.cognome = "Bianchi";
+  studente2.voto = 24;
+
+  // 6. Media studente2
+  const media2 = studente2.calcolaMedia(20, 26);
+  out.innerText += `Media studente2 (${studente2.nome}): ${media2}\n\n`;
+
+  // 7. Confronto voti iniziali
+  if(studente1.voto > studente2.voto){
+    out.innerText += `${studente1.nome} ha il voto più alto (${studente1.voto})\n\n`;
+  } else if(studente2.voto > studente1.voto){
+    out.innerText += `${studente2.nome} ha il voto più alto (${studente2.voto})\n\n`;
+  } else {
+    out.innerText += `I due studenti hanno lo stesso voto\n\n`;
+  }
+
+  // 8. Modifica voti
+  studente1.voto = 30;
+  studente2.voto = 18;
+
+  // 9. Nuove medie
+  const nuovaMedia1 = studente1.calcolaMedia(30, 28);
+  const nuovaMedia2 = studente2.calcolaMedia(18, 20);
+
+  out.innerText += `Nuova media ${studente1.nome}: ${nuovaMedia1}\n`;
+  out.innerText += `Nuova media ${studente2.nome}: ${nuovaMedia2}\n\n`;
+
+  // 10. Nuovo confronto voti
+  if(studente1.voto > studente2.voto){
+    out.innerText += `Dopo aggiornamento: ${studente1.nome} ha il voto più alto (${studente1.voto})`;
+  } else if(studente2.voto > studente1.voto){
+    out.innerText += `Dopo aggiornamento: ${studente2.nome} ha il voto più alto (${studente2.voto})`;
+  } else {
+    out.innerText += `Dopo aggiornamento: i voti sono uguali`;
+  }
+
+</script>
+
+</body>
+</html>

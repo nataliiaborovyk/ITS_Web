@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Calcolatrice</title>
+</head>
+<body>
+
+  <h2>Calcolatrice</h2>
+
+  <input id="num1" type="number" placeholder="Primo numero">
+  <select id="operazione">
+    <option value="+"> + </option>
+    <option value="-"> - </option>
+    <option value="*"> * </option>
+    <option value="/"> / </option>
+  </select>
+  <input id="num2" type="number" placeholder="Secondo numero">
+
+  <button onclick="calcola()">Calcola</button>
+
+  <h3>Risultato: <span id="risultato"></span></h3>
+
+  <script>
+    function calcola() {
+      const n1 = Number(document.getElementById("num1").value);
+      const n2 = Number(document.getElementById("num2").value);
+      const operazione = document.getElementById("operazione").value;
+      let result = 0;
+
+      if (operazione === "+") {
+        result = n1 + n2;
+      } 
+      else if (operazione === "-") {
+        result = n1 - n2;
+      } 
+      else if (operazione === "*") {
+        result = n1 * n2;
+      } 
+      else if (operazione === "/") {
+        if (n2 === 0) {
+          result = "Errore: divisione per zero!";
+        } else {
+          result = n1 / n2;
+        }
+      }
+
+      document.getElementById("risultato").innerText = result;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!-- Progettare un oggettorubrica che ha come
+proprietà gli utenti. Dopo, per ogni utente
+specificare altre proprietà: utente, nome,
+cognome, telefono e indirizzo. Dove indirizzo è a
+sua volta un altro oggetto contenente altre
+proprietà.
+Quindi popolare la rubrica con dei dati a piacere.
+Dopo eliminare l’ultimo elemento e visualizzare
+nuovamente la rubrica così ottenuta. -->
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Rubrica</title>
+</head>
+<body>
+
+  <h2>Rubrica</h2>
+  <pre id="output"></pre>
+
+  <script>
+  
+    const rubrica = {
+      utenti: [
+        {
+          utente: "user1",
+          nome: "Mario",
+          cognome: "Rossi",
+          telefono: "3331111111",
+          indirizzo: {
+            via: "Via Roma",
+            civico: 10,
+            citta: "Roma",
+            cap: "00100"
+          }
+        },
+        {
+          utente: "user2",
+          nome: "Anna",
+          cognome: "Bianchi",
+          telefono: "3332222222",
+          indirizzo: {
+            via: "Corso Italia",
+            civico: 5,
+            citta: "Milano",
+            cap: "20100"
+          }
+        },
+        {
+          utente: "user3",
+          nome: "Luca",
+          cognome: "Verdi",
+          telefono: "3333333333",
+          indirizzo: {
+            via: "Via Garibaldi",
+            civico: 20,
+            citta: "Torino",
+            cap: "10100"
+          }
+        }
+      ]
+    };
+
+    const out = document.getElementById("output");
+
+    // funzione per visualizzare la rubrica
+    function stampaRubrica(titolo) {
+      out.innerText += titolo + "\n";
+      out.innerText += JSON.stringify(rubrica, null, 2) + "\n\n";
+    }
+
+    // 2. Visualizzo rubrica iniziale
+    stampaRubrica("Rubrica iniziale:");
+
+    // 3. Elimino l'ultimo utente
+    rubrica.utenti.pop();
+
+    // 4. Visualizzo rubrica dopo l'eliminazione
+    stampaRubrica("Rubrica dopo eliminazione ultimo utente:");
+  </script>
+
+</body>
+</html>

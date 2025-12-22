@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Esercizio Asterischi</title>
+</head>
+<body>
+
+  <div id="root"></div>
+
+  <script>
+    function stampaAsterischi() {
+      const div = document.getElementById("root");
+
+      for(let i = 10; i <= 30; i++){
+        let riga = "";
+        
+        for(let j = 0; j < i; j++){
+          riga += "*";
+        }
+
+        div.innerHTML += riga + "<br>";
+      }
+    }
+
+    stampaAsterischi();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Linee con HR</title>
+</head>
+<body>
+
+  <h2>Linee da 0% a 100% ogni 5%</h2>
+  <div id="root"></div>
+
+  <script>
+    function creaLinee() {
+      const container = document.getElementById("root");
+
+      for(let i = 0; i <= 100; i += 5){
+        const linea = document.createElement("hr");
+
+        linea.style.width = i + "%";
+        // linea.style.height = "5px";
+        // linea.style.backgroundColor = "black";
+        // linea.style.border = "none";
+        // linea.style.margin = "5px 0";
+
+        container.appendChild(linea);
+      }
+    }
+
+    creaLinee();
+  </script>
+
+</body>
+</html>
